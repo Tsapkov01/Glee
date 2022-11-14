@@ -3,6 +3,107 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 40px 0;
+  
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  &__img {
+    padding-right: 10px;
+  }
+  @extend %rubik-500;
+  font-size: 36px;
+  line-height: 58px;
+  color: $accent;
+
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__list-link{
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    color: $accent;
+  }
+  
+  &__list-item+.menu__list-item {
+    padding-left: 30px;
+  }
+}
+
+.user-nav {
+  display: flex;
+  justify-content: space-between;
+  
+  &__link-search{
+    width: 50px;
+    height: 50px;
+    background-color: #edf1f4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  &__link-dots{
+    width: 50px;
+    height: 50px;
+    background-color: #a3bbc8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+  }
+  &__link-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fcd7b6;
+    width: 180px;
+    border-radius: 25px;
+  }
+  &__link-icon {
+    position: relative;      
+  }
+  &__link-icon--line::before{
+    content: '';
+    position: absolute;
+    background-color: #fde7d3;
+    width: 1px;
+    height: 30px;
+    top: -7px;
+    left: 55px;
+  }
+  &__num {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: -7px;
+    right: -8px;
+    font-size: 10px;
+    text-align: center;
+    @extend %dmsans-400;
+    font-size: 10px;
+    line-height: 16px;
+    color: $accent;
+  }
+}
+
+
 
 
 
